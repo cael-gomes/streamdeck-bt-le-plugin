@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+
+# Stream Deck files
+*.sdPlugin/bin
+*.sdPlugin/logs
+*.sdPlugin/node_modules
+
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build output
+dist/
+build/
+coverage/
+
+# Environment files
+.env
+.env.*

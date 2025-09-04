@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Stream Deck Plugin",
+            "program": "${workspaceFolder}/com.cael-gomes.bt-controller.sdPlugin/bin/plugin.js",
+            "args": [],
+            "stopOnEntry": false,
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "npm: build",
+            "outFiles": [
+                "${workspaceFolder}/com.cael-gomes.bt-controller.sdPlugin/bin/**/*.js"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "DEBUG": "noble*"
+            },
+            "console": "integratedTerminal",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./src/*": "${workspaceFolder}/src/*",
+                "webpack:///*": "${workspaceFolder}/*"
+            }
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Stream Deck Plugin",
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "${workspaceFolder}",
+            "outFiles": [
+                "${workspaceFolder}/com.cael-gomes.bt-controller.sdPlugin/bin/**/*.js"
+            ],
+            "sourceMaps": true,
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug with Auto-Build",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "start:debug"
+            ],
+            "port": 9229,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/com.cael-gomes.bt-controller.sdPlugin/bin/**/*.js"
+            ],
+            "sourceMaps": true,
+            "console": "integratedTerminal"
+        }
+    ]
+}

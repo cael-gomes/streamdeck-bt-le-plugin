@@ -1,0 +1,47 @@
+{
+	"Name": "Bluetooth LE Controller",
+	"Version": "1.0.0.0",
+	"Author": "Cael Gomes",
+	"Actions": [
+		{
+			"Name": "BT Control",
+			"UUID": "com.cael-gomes.bt-controller.control",
+			"Icon": "imgs/actions/bt-control/icon",
+			"Tooltip": "Control any Bluetooth LE device with custom commands",
+			"PropertyInspectorPath": "ui/bt-controller.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/bt-control/key",
+					"TitleAlignment": "middle" 
+				}
+			]
+		}
+	],
+	"Category": "Bluetooth LE Controller",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "A Stream Deck plugin for controlling any Bluetooth LE device with customizable commands.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.5"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.cael-gomes.bt-controller"
+}
